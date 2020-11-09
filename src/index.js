@@ -33,7 +33,7 @@ componentWillUnmount() {
     document.removeEventListener('keypress', this.onKeyPress);
   }
  onKeyPress(event){
-   var sound = beats.filter(x=> x.btn == event.key.toUpperCase());
+   var sound = beats.filter(x=> x.btn === event.key.toUpperCase());
    if(sound[0]){   
    this.setState ({
       name: sound[0].name
@@ -42,8 +42,8 @@ componentWillUnmount() {
    }
  } 
   
- onClick(value){
-   var sound = beats.filter(x=> x.btn == event.target.id);
+ onClick(event){
+   var sound = beats.filter(x=> x.btn === event.target.id);
     this.setState ({
       name: sound[0].name
     });
