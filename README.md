@@ -11,6 +11,7 @@
 
 ## Future Updates
 * Volume control
+* Multiple drum kit banks
 
 ## Issues
 * If you encounter any loss of functionality at any time while using the app, I would appreciate feedback!
