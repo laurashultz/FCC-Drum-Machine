@@ -1,0 +1,157 @@
+/*some colors and gradients to use in the project*/
+:root{
+    --color1: #191919;
+    --color2: #323232;
+    --btn-color1: #8d42ff;
+    --btn-key1: #a367ff;
+    --btn-color2: #0065f0;
+    --btn-key2: #3283f3;
+    --btn-color3: #ff4254;
+    --btn-key3: #ff6776;
+    --color-brushed: linear-gradient(black, var(--color1) 10%, var(--color2) 30%, var(--color1) 55%, black);
+    --color-led: linear-gradient(var(--btn-color1) 40%, var(--btn-color2), var(--btn-color3) 80%);
+  }
+  .brushed{
+    background: var(--color-brushed);
+  }
+  .text-LED{
+    background: var(--color-led);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font: 1.5em 'Allerta Stencil';
+    margin: 2px;
+  }
+  .trans-bg{
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid var(--color1);
+  }
+  /*apply styles to the root element where everything will be rendered, basically just making it centered in the page here*/
+  #root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: grey;
+  }
+  #drum-machine{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    width: 95vw;
+    border-radius: 1em;
+    box-shadow: 0 0 0.5em black;
+    max-width: 25em;
+    max-height: 100vh;
+  }
+  
+  /*general style stuff for both sides of the drum machine, then more specific stuff within the two IDs (pads and controls)*/
+  .panel{
+    margin: 0.2em;
+    border-radius: 1em;
+    max-width: 25em;
+    max-height: 50%;
+  }
+  #pads{
+    display:flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+  }
+  #controls{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: center;
+    text-align: center;
+    border-radius: 1em;
+  }
+    #display {
+      background-color: var(--color2);
+      color: white;
+      font: 1.5em monospace;
+      text-align: center;
+      width: 100%;
+      height: 1.5em;
+      margin: 0 1em 0 1em;
+      border-radius: 0.5em;
+    }
+  
+  /*the lines class is a general style to format each row of buttons, then each button color has its own class + hover effect*/
+  .lines{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    margin: auto;
+  }
+  .drum-pad{
+    background-image: var(--color-brushed);
+    border-radius: 10%;
+    border: 1px solid black;
+    min-width: 1.75em;
+    max-width: 2em;
+    min-height: 1.75em;
+    max-height: 2em;
+    margin: 0.3em;
+    font: 2.4em monospace;
+    font-weight: bold;
+    padding: auto;
+  }
+  .row1 button{
+    box-shadow: 0px 4px 3px var(--btn-color1);
+    color: var(--btn-key1);
+  }
+  .row1 button:hover{
+    box-shadow: 0px 4px 5px var(--btn-color1);
+    color: var(--btn-color1);
+  }
+  .row2 button{
+    box-shadow: 0px 4px 3px var(--btn-color2);
+    color: var(--btn-key2);
+  }
+  .row2 button:hover{
+    box-shadow: 0px 4px 5px var(--btn-color2);
+    color: var(--btn-color2);
+  }
+  .row3 button{
+    box-shadow: 0px 4px 3px var(--btn-color3);
+    color: var(--btn-key3);
+  }
+  .row3 button:hover{
+    box-shadow: 0px 4px 5px var(--btn-color3);
+    color: var(--btn-color3);
+  }
+  
+  
+  /**what to do differently if we are on a larger device or screen**/
+  @media (min-width: 43em) {
+    #drum-machine{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1em 0.5em 1em 0.5em;
+    min-width: 40em;
+    }
+    .panel {
+      margin: 0 0.5em 0 0.5em;
+      max-width: auto;
+    }
+    #pads{
+      flex: 1;
+      max-width: 15em;
+    }  
+    #controls{
+     flex: 1.5;
+     width: 21em;
+    }
+     #display {
+     width: 100%;
+     margin: 0.5em;
+     padding: .25em;
+    }
+    .text-LED{
+      font: 2.25em 'Allerta Stencil';
+    }
+  }
