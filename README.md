@@ -1,7 +1,7 @@
 # FCC-Drum-Machine
 ## Functionality
 * This web app was developed to satisfy a portion of the [FreeCodeCamp](https://www.freecodecamp.org/) Front End Libraries certification. 
-* The test suite for this project appears as an overlay on the upper right-hand corner of the app, and it can be run by selecting Drum Machine from the drop-down box, and clicking "run tests".
+* The test suite for this project appears as an overlay on the upper left-hand corner of the app, and it can be run by selecting Drum Machine from the drop-down box, and clicking "run tests".
 * The primary function of the app is to play audio when each button is clicked, or if the corresponding key is pressed on the keyboard.
 * The app was designed to be responsive to changes in browser width, device size and text size. 
 
