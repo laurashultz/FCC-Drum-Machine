@@ -6,7 +6,7 @@
 * The app was designed to be responsive to changes in browser width, device size and text size. 
 
 ## Web App Deployment
-* If you would like to view the app itself, it's been deployed on GitHub pages! Please see [the deployed Drum Machine web app here](https://loofmot.github.io/FCC-Drum-Machine/).
+* If you would like to view the app itself, it's been deployed on GitHub pages! Please see [the deployed Drum Machine web app here](https://laurashultz.github.io/FCC-Drum-Machine/).
 * If you are interested in downloading the project and viewing it locally, you may clone the repo, navigate to the directory, and run the command `npm start` to view it in a local environment. If the command is run in the root directory of the repository, the app will be viewable by navigating to "localhost:3000" in your web browser.
 
 ## Future Updates
